@@ -1,14 +1,13 @@
 import { useState } from "react";
 
-const Admin = (props) => {
+const Admin = ({addPass}) => {
   const [eventName, setEventName] = useState("");
   const [table, setTable] = useState("");
   const [image, setImage] = useState("");
 
   const submitHandler = (e)=>{
     e.preventDefault();
-    console.log(eventName, table)
-    props.addPass(eventName, table, image);
+    addPass(eventName, table, image);
   }
   return (
     <section className="content">

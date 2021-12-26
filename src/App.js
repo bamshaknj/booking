@@ -11,11 +11,8 @@ import { newKitFromWeb3 } from "@celo/contractkit";
 
 import booker from "./contracts/booker.abi.json";
 import ierc from "./contracts/ierc.abi.json";
+import { contractAddress, cUSDContractAddress, ERC20_DECIMALS } from "./utils/constants";
 
-const ERC20_DECIMALS = 18;
-
-const contractAddress = "0x105b0698d529f4c0CA876B90EeaA8Db6Afa3d519";
-const cUSDContractAddress = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1";
 
 function App() {
   const [contract, setcontract] = useState(null);
