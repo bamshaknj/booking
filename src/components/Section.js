@@ -1,8 +1,8 @@
 import React from "react";
 
-const Section = (props) => {
+const Section = ({bookPass, passes}) => {
   const bookHandler = (index) => {
-    props.bookPass(index);
+   bookPass(index);
   };
 
   return (
@@ -42,7 +42,7 @@ const Section = (props) => {
               <tr className="space">
                 <td>&nbsp;</td>
               </tr>
-              {props.passes.map((pass) => (
+              {passes.map((pass) => (
                 <React.Fragment>
                   <tr>
                     <td className="event-date">{pass.table}</td>
@@ -78,7 +78,7 @@ const Section = (props) => {
           </table>
           <div className="event-mobile">
             <ul className="event-list">
-              {props.passes.map((pass) => (
+              {passes.map((pass) => (
                 <li>
                   <span className="img-thumb">
                     <a href="single-event.html">

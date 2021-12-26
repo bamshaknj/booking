@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = (props) => {
+const Header = ({isAdmin, balance}) => {
   return (
     <header id="header" className="header-style-1">
       <div className="container">
@@ -36,14 +36,14 @@ const Header = (props) => {
                       Home
                     </Link>
                   </li>
-                  {props.isAdmin && <li className="menu-item">
+                  {isAdmin && <li className="menu-item">
                     <Link to="/admin" className="menu-link">
                       Admin
                     </Link>
                   </li>}
                   <li className="menu-item">
                     <a className="menu-link">
-                      {props.balance}cUSD
+                      {balance}cUSD
                     </a>
                   </li>
                 </ul>
