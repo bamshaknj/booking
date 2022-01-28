@@ -14,7 +14,7 @@ import ierc from "./contracts/ierc.abi.json";
 
 const ERC20_DECIMALS = 18;
 
-const contractAddress = "0x105b0698d529f4c0CA876B90EeaA8Db6Afa3d519";
+const contractAddress = "0x8E16DEc920bb427010D80fC11A16CAdaAeFe53f2";
 const cUSDContractAddress = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1";
 
 function App() {
@@ -93,11 +93,13 @@ function App() {
           table: p[2],
           amount: p[3],
           imageURL: p[4],
+          quantity:p[5]
         });
       });
       _passes.push(_pass);
     }
     const passes = await Promise.all(_passes);
+    console.log(passes);
     setPass(passes);
   };
   const bookPass = async (_index) => {
